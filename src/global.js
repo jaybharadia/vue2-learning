@@ -2,6 +2,7 @@ import Vue from "vue";
 import vSelect from "vue-select";
 
 import "vue-select/dist/vue-select.css";
+import axios from "@/plugins/axios";
 
 Vue.component("v-select", vSelect);
 
@@ -14,3 +15,6 @@ icons.keys().map((item) => {
   let component = icons(item);
   Vue.component(name, component.default);
 });
+
+// Registering Axios globally
+Vue.prototype.$axios = axios;

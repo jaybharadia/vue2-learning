@@ -12,6 +12,7 @@ export default {
   components: {
     Sidebar: require("@/components/Sidebar.vue").default,
   },
+
   data() {
     return {
       file: [],
@@ -38,7 +39,8 @@ export default {
           },
         },
         {
-          title: "Customers",
+          title: "Axios Get Data Caching",
+          href: { name: "axios-data" },
           icon: {
             element: "IcOutlineArrowDropDownCircle",
           },
