@@ -7,6 +7,7 @@ import "./styles/index.css";
 import "./global";
 
 import "./plugins/index.js";
+import './registerServiceWorker'
 Vue.config.productionTip = false;
 
 new Vue({
