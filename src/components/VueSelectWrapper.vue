@@ -11,8 +11,7 @@
       :selectable="() => selectedOption.length < 2"
       :reduce="(item) => item.value"
       placeholder="Select Framework"
-    >
-    </v-select>
+    />
   </div>
 </template>
 

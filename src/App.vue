@@ -25,7 +25,7 @@ export default {
         },
         {
           title: "Vue Select",
-
+          href: { name: "vue-select" },
           icon: {
             element: "IcOutlineArrowDropDownCircle",
           },
