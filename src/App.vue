@@ -46,10 +46,20 @@ export default {
           },
         },
         {
-          title: "Customers",
+          title: "Input Mask Library",
           icon: {
             element: "IcOutlineArrowDropDownCircle",
           },
+          child: [
+            {
+              title: "V Mask",
+              href: { name: "vue-mask-v-mask" },
+            },
+            {
+              title: "I Mask ",
+              href: { name: "vue-mask-i-maskjs" },
+            },
+          ],
         },
         {
           title: "Customers",
