@@ -8,3 +8,6 @@ import "./axios";
 
 // V Mask Plugin
 import "./v-mask";
+
+// Vue Tour
+import "./vue-tour";

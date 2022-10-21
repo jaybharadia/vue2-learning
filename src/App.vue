@@ -3,7 +3,9 @@
     <!-- <router-view/> -->
 
     <Sidebar :menu="menu" />
-    <router-view></router-view>
+    <div class="layout-content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -67,9 +69,24 @@ export default {
             element: "IcOutlineArrowDropDownCircle",
           },
         },
+        {
+          title: "Vue Tour",
+          href: { name: "vue-tour" },
+          icon: {
+            element: "IcAirplane",
+          },
+        },
+        {
+          title: "Otp Input",
+          href: { name: "otp-input" },
+          icon: {
+            element: "MdiNumeric6CircleOutline",
+          },
+        },
       ],
     };
   },
+  mounted() {},
 
   methods: {},
 };
@@ -103,5 +120,11 @@ nav a.router-link-exact-active {
 
 .content {
   margin-left: 200px;
+}
+.layout-content {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
 </style>
