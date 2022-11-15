@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!-- <router-view/> -->
-
     <Sidebar :menu="menu" />
     <div class="layout-content">
       <router-view></router-view>
@@ -10,10 +8,14 @@
 </template>
 
 <script>
+// import productMixin from "@/mixins/product";
 export default {
   components: {
     Sidebar: require("@/components/Sidebar.vue").default,
   },
+  // mixins: [productMixin],
+
+  created() {},
 
   data() {
     return {
@@ -83,6 +85,13 @@ export default {
             element: "MdiNumeric6CircleOutline",
           },
         },
+        {
+          title: "Vee Validate",
+          href: { name: "vee-validate" },
+          icon: {
+            element: "MdiNumeric6CircleOutline",
+          },
+        },
       ],
     };
   },
@@ -92,7 +101,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

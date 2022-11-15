@@ -5,6 +5,8 @@
 </template>
 
 <script>
+// import variables from "@/styles/variables.scss";
+// console.log("scss varibales", variables);
 export default {
   props: {
     menu: Array,
@@ -33,4 +35,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>

@@ -1,17 +1,7 @@
 <template>
   <div class="container content">
     File Upload section
-    <VueFileAgent
-      v-model="file"
-      theme="grid"
-      :deletable="true"
-      ref="fileAgent"
-      :multiple="false"
-      accept="image/*,.pdf"
-      :maxSize="'5MB'"
-      @beforedelete="onBeforeDelete($event)"
-      :meta="true"
-    />
+    <VueFileAgent v-model="file" theme="grid" :deletable="true" ref="fileAgent" :multiple="true" accept="image/*,.pdf" :maxSize="'5MB'" @beforedelete="onBeforeDelete($event)" :meta="true" />
   </div>
 </template>
 
