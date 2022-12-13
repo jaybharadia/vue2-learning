@@ -2,7 +2,13 @@
   <div id="app">
     <Sidebar :menu="menu" />
     <div class="layout-content">
-      <router-view></router-view>
+      <!-- <router-view></router-view> -->
+
+      <h2>Testing Array caveats</h2>
+
+      Array {{ companies }}
+
+      <button @click="updateArray">Update</button>
     </div>
   </div>
 </template>
@@ -15,11 +21,14 @@ export default {
   },
   // mixins: [productMixin],
 
-  created() {},
+  created() {
+    // this.companies[2] = "TCS";
+  },
 
   data() {
     return {
       file: [],
+      companies: ["L&T", "7Span"],
       show: false,
       menu: [
         {
@@ -92,12 +101,30 @@ export default {
             element: "MdiNumeric6CircleOutline",
           },
         },
+        {
+          title: "Date Picker",
+          href: { name: "date-picker" },
+          icon: {
+            element: "MdiNumeric6CircleOutline",
+          },
+        },
       ],
     };
   },
-  mounted() {},
+  mounted() {
+    // this.companies[2] = "Capegemini";
+    // this.companies.push("TCS");
+  },
 
-  methods: {},
+  methods: {
+    updateArray() {
+      this.companies[1] = "Accenture";
+      // this.companies.push("TATA");
+
+      // this.$set(this.companies, 2, "IBM");
+      console.log("inside update array method", this.companies);
+    },
+  },
 };
 </script>
 

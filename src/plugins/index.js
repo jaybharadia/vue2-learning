@@ -14,3 +14,6 @@ import "./vue-tour";
 
 // Vee Validate
 import "./vee-validate";
+
+// Date picker
+import "./date-picker";

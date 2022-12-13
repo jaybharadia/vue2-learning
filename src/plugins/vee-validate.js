@@ -1,21 +1,33 @@
 import Vue from "vue";
-import { ValidationProvider, extend } from "vee-validate";
+// import { ValidationProvider, extend } from "vee-validate";
 
-import { required, email, min, max, max_value, min_value } from "vee-validate/dist/rules";
-import en from "vee-validate/dist/locale/en";
+import { ValidationProvider, extend, ValidationObserver } from "vee-validate/dist/vee-validate.full.esm";
 
-const rules = { required, email, min, max, max_value, min_value };
+// import { required, email, min, max, max_value, min_value, alpha_num, alpha_spaces, alpha_dash } from "vee-validate/dist/rules";
+// import en from "vee-validate/dist/locale/en";
 
-for (let rule in rules) {
-  extend(rule, {
-    ...rules[rule], // add the rule
-    message: en.messages[rule], // add its message
-  });
-}
+// const rules = { required, email, min, max, max_value, min_value, alpha_num, alpha_spaces, alpha_dash };
+
+// for (let rule in rules) {
+//   extend(rule, {
+//     ...rules[rule], // add the rule
+//     message: en.messages[rule], // add its message
+//   });
+// }
 
 extend("secret", {
   validate: (value) => value === "example",
   message: "This is not the magic word",
+});
+
+extend("required", {
+  validate(value) {
+    return {
+      required: true,
+      valid: ["", null, undefined].indexOf(value) === -1,
+    };
+  },
+  computesRequired: true,
 });
 
 extend("minimum", {
@@ -42,3 +54,4 @@ extend("one_of", {
 });
 
 Vue.component("ValidationProvider", ValidationProvider);
+Vue.component("ValidationObserver", ValidationObserver);

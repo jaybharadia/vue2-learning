@@ -14,12 +14,34 @@
       <button :disabled="invalid">Validate minimum 5</button>
     </validation-provider> -->
 
-    <validation-provider rules="required|one_of:1,2,3,4,5,6,7,8,9" v-slot="{ errors, invalid }" name="Option">
+    <!-- <validation-provider rules="required|one_of:1,2,3,4,5,6,7,8,9" v-slot="{ errors, invalid }" name="Option">
       <input v-model="value" name="myinput" type="text" />
-      <span>{{ errors[0] }}</span>
+      <span>{{ errors[0] }}</span> -->
 
-      <button :disabled="invalid">Validate minimum 5</button>
-    </validation-provider>
+    <ValidationObserver v-slot="{ invalid }">
+      <validation-provider rules="required" name="password" vid="password" immediate v-slot="{ errors }">
+        <label for=""> Password </label>
+        <input v-model="password" type="text" />
+        <span>{{ errors[0] }}</span>
+      </validation-provider>
+
+      <validation-provider rules="confirmed:password" name="confirm password" immediate v-slot="{ errors }" :slim="true">
+        <label for="">Confirm password</label>
+        <input v-model="confirmPassword" type="text" />
+        <span>{{ errors[0] }}</span>
+
+        <button :disabled="invalid">Validate</button>
+      </validation-provider>
+
+      <!-- FIle Validation -->
+
+      <ValidationProvider rules="required|image" v-slot="{ validate, errors }">
+        <input type="file" @change="validate" />
+        <p>{{ errors[0] }}</p>
+      </ValidationProvider>
+
+      <button :disabled="invalid">Submit</button>
+    </ValidationObserver>
   </div>
 </template>
 
@@ -27,7 +49,8 @@
 export default {
   data() {
     return {
-      value: null,
+      password: null,
+      confirmPassword: null,
     };
   },
 };

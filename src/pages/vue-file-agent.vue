@@ -1,7 +1,18 @@
 <template>
   <div class="container content">
     File Upload section
-    <VueFileAgent v-model="file" theme="grid" :deletable="true" ref="fileAgent" :multiple="true" accept="image/*,.pdf" :maxSize="'5MB'" @beforedelete="onBeforeDelete($event)" :meta="true" />
+    <VueFileAgent
+      v-model="file"
+      theme="grid"
+      :thumbnailSize="120"
+      :deletable="true"
+      ref="fileAgent"
+      :multiple="true"
+      accept="image/*,.pdf"
+      :maxSize="'5MB'"
+      @beforedelete="onBeforeDelete($event)"
+      :meta="true"
+    />
   </div>
 </template>
 
@@ -10,13 +21,15 @@ export default {
   components: {},
   data() {
     return {
-      file: {
-        name: "Cancelled Cheque",
-        type: "image/jpeg",
-        size: 4949393,
-        ext: "jpeg",
-        url: "https://api-bii.preview.im/storage/company-16/documents/314d29ed-e7fb-4806-a848-c1902e4befec.jpeg",
-      },
+      // file: {
+      //   name: "Cancelled Cheque",
+      //   type: "image/jpeg",
+      //   size: 4949393,
+      //   ext: "jpeg",
+      //   url: "https://api-bii.preview.im/storage/company-16/documents/314d29ed-e7fb-4806-a848-c1902e4befec.jpeg",
+      // },
+
+      file: null,
     };
   },
   methods: {
