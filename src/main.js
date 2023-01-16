@@ -8,10 +8,12 @@ import "./global";
 
 import "./plugins/index.js";
 import './registerServiceWorker'
+import { createProvider } from './vue-apollo'
 Vue.config.productionTip = false;
 
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  apolloProvider: createProvider(),
+  render: (h) => h(App)
 }).$mount("#app");

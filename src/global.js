@@ -3,7 +3,7 @@ import vSelect from "vue-select";
 
 import "vue-select/dist/vue-select.css";
 import axios from "@/plugins/axios";
-
+import gql from "graphql-tag";
 Vue.component("v-select", vSelect);
 
 // Registering Icons Automatically globally.
@@ -18,3 +18,9 @@ icons.keys().map((item) => {
 
 // Registering Axios globally
 Vue.prototype.$axios = axios;
+
+// Registering GQL TAG
+Vue.prototype.$gql = (query) =>
+  gql`
+    ${query}
+  `;

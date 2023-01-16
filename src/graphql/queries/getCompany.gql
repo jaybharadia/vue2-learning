@@ -1,0 +1,9 @@
+query ($gstNo: String!, $id: String!) {
+  company(gstNo: $gstNo, id: $id) {
+    type {
+      displayName
+      name
+      id
+    }
+  }
+}

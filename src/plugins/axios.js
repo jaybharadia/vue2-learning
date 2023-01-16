@@ -1,13 +1,13 @@
 import axios from "axios";
 import qs from "qs";
 import router from "@/router";
-import { cacheAdapterEnhancer } from "axios-extensions";
+// import { cacheAdapterEnhancer } from "axios-extensions";
 
 // DEFAULT CONFIG
 
+// adapter: cacheAdapterEnhancer(axios.defaults.adapter),
 const config = {
   // Axios Caching Network requests
-  adapter: cacheAdapterEnhancer(axios.defaults.adapter),
   baseURL: process.env.VUE_APP_API,
   timeout: 30000,
   headers: {

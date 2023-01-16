@@ -13,12 +13,16 @@
       @beforedelete="onBeforeDelete($event)"
       :meta="true"
     />
+
+    <Profile key="1" />
   </div>
 </template>
 
 <script>
 export default {
-  components: {},
+  components: {
+    Profile: require("@/components/Profile.vue").default,
+  },
   data() {
     return {
       // file: {

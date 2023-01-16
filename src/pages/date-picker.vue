@@ -9,7 +9,12 @@
     <!-- Date time  -->
     <!-- <date-picker type="datetime" v-model="date" placeholder="Select" format="DD MMM YYYY hh  : mm : ss A" value-type="DD/MM/YYYY" /> -->
 
-    <date-picker type="datetime" v-model="date" placeholder="Select" @input-error="inputInvalid" />
+    <date-picker
+      type="datetime"
+      v-model="date"
+      placeholder="Select"
+      @input-error="inputInvalid"
+    />
 
     <!--  Year calendar -->
     <!-- <date-picker type="year" range v-model="date" placeholder="Select" /> -->
@@ -42,6 +47,8 @@
     <!-- INline  -->
 
     <!-- <date-picker type="datetime" v-model="date" placeholder="Select" inline /> -->
+
+    <Profile key="1" />
   </div>
 </template>
 
@@ -51,6 +58,9 @@ export default {
     return {
       date: null,
     };
+  },
+  components: {
+    Profile: require("@/components/Profile.vue").default,
   },
   methods: {
     setDisabledDate(date, dateArray) {

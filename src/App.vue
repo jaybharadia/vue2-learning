@@ -2,7 +2,7 @@
   <div id="app">
     <Sidebar :menu="menu" />
     <div class="layout-content">
-      <!-- <router-view></router-view> -->
+      <router-view></router-view>
 
       <h2>Testing Array caveats</h2>
 
@@ -54,6 +54,13 @@ export default {
         {
           title: "Axios Get Data Caching",
           href: { name: "axios-data" },
+          icon: {
+            element: "IcOutlineArrowDropDownCircle",
+          },
+        },
+        {
+          title: "Vue Apollo",
+          href: { name: "vue-apollo" },
           icon: {
             element: "IcOutlineArrowDropDownCircle",
           },
