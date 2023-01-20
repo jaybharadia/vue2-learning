@@ -115,6 +115,13 @@ export default {
             element: "MdiNumeric6CircleOutline",
           },
         },
+        {
+          title: "Vue Table",
+          href: { name: "vue-table" },
+          icon: {
+            element: "MdiNumeric6CircleOutline",
+          },
+        },
       ],
     };
   },

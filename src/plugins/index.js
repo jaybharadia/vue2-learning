@@ -17,3 +17,6 @@ import "./vee-validate";
 
 // Date picker
 import "./date-picker";
+
+// Vue Table
+import "./vue-table";

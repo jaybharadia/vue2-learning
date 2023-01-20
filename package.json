@@ -58,6 +58,7 @@
     "vue-cli-plugin-apollo": "~0.22.2",
     "vue-cli-plugin-auto-routing": "~1.3.0",
     "vue-cli-plugin-styleguidist": "~4.45.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vuetable-2": "^1.7.5"
   }
 }
