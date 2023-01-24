@@ -20,3 +20,6 @@ import "./date-picker";
 
 // Vue Table
 import "./vue-table";
+
+// Light Vue UI
+import "./lightvue";

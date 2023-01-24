@@ -3,12 +3,6 @@
     <Sidebar :menu="menu" />
     <div class="layout-content">
       <router-view></router-view>
-
-      <h2>Testing Array caveats</h2>
-
-      Array {{ companies }}
-
-      <button @click="updateArray">Update</button>
     </div>
   </div>
 </template>
@@ -78,6 +72,18 @@ export default {
             {
               title: "I Mask ",
               href: { name: "vue-mask-i-maskjs" },
+            },
+          ],
+        },
+        {
+          title: "LightVUE",
+          icon: {
+            element: "IcOutlineArrowDropDownCircle",
+          },
+          child: [
+            {
+              title: "Buttons",
+              href: { name: "lightvue-button" },
             },
           ],
         },
@@ -176,5 +182,7 @@ nav a.router-link-exact-active {
   height: 100vh;
   display: grid;
   place-items: center;
+  padding: 20px;
+  margin-left: 200px;
 }
 </style>

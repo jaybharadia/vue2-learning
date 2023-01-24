@@ -6,6 +6,10 @@ import axios from "@/plugins/axios";
 import gql from "graphql-tag";
 Vue.component("v-select", vSelect);
 
+// List Loader
+import ListLoader from "@/components/loader/ListLoader.vue";
+Vue.component("ListLoader", ListLoader);
+
 // Registering Icons Automatically globally.
 
 const icons = require.context("./icons", true, /\.vue/i);
@@ -24,3 +28,9 @@ Vue.prototype.$gql = (query) =>
   gql`
     ${query}
   `;
+
+import LvButton from "lightvue/button";
+Vue.component("LvButton", LvButton);
+
+import LvCheckBox from "lightvue/checkbox";
+Vue.component("LvCheckBox", LvCheckBox);
