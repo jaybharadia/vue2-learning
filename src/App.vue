@@ -9,6 +9,9 @@
 
 <script>
 // import productMixin from "@/mixins/product";
+import { auth } from "./utilities/shared/types/index";
+
+console.log("AUTH->>>>", auth);
 export default {
   components: {
     Sidebar: require("@/components/Sidebar.vue").default,
