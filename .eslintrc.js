@@ -3,7 +3,12 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["plugin:vue/essential", "eslint:recommended"],
+  plugins: ["@pagemaker.io"],
+  extends: [
+    "plugin:vue/essential",
+    "eslint:recommended",
+    "plugin:@pagemaker.io/essential",
+  ],
   parserOptions: {
     parser: "@babel/eslint-parser",
   },

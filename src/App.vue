@@ -3,6 +3,8 @@
     <Sidebar :menu="menu" />
     <div class="layout-content">
       <router-view></router-view>
+
+      <pm-grid> </pm-grid>
     </div>
   </div>
 </template>
