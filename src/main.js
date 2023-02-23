@@ -7,13 +7,13 @@ import "./styles/index.css";
 import "./global";
 
 import "./plugins/index.js";
-import './registerServiceWorker'
-import { createProvider } from './vue-apollo'
+import "./registerServiceWorker";
+import { createProvider } from "./vue-apollo";
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  store,
-  apolloProvider: createProvider(),
-  render: (h) => h(App)
+    router,
+    store,
+    apolloProvider: createProvider(),
+    render: (h) => h(App),
 }).$mount("#app");

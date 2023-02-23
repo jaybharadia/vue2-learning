@@ -25,6 +25,15 @@
         <span>{{ errors[0] }}</span>
       </validation-provider>
 
+      <label for=""> Price </label>
+
+      <h3>{{  price  }}</h3>
+      <validation-provider rules="required" name="password" vid="password" immediate v-slot="{ errors }">
+        <input v-model.number="price" type="number" />
+        <span>{{ errors[0] }}</span>
+      </validation-provider>
+
+
       <validation-provider rules="confirmed:password" name="confirm password" immediate v-slot="{ errors }" :slim="true">
         <label for="">Confirm password</label>
         <input v-model="confirmPassword" type="text" />
@@ -51,6 +60,7 @@ export default {
     return {
       password: null,
       confirmPassword: null,
+      price : 0,
     };
   },
 };
